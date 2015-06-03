@@ -20,7 +20,7 @@ public class Tree {
         projectTrees.put("Cupcakes", ex1());
     }
 
-    public List<String> projects() {
+    public List<String> getProjectNames() {
         return projectNames;
     }
 

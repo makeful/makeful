@@ -1,10 +1,18 @@
 package com.example.android.makeful;
 
-import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import com.example.android.makeful.tree.Tree;
+
+import java.util.List;
 
 
 /**
@@ -12,12 +20,32 @@ import android.view.ViewGroup;
  */
 public class ProjectListActivityFragment extends Fragment {
 
+    ArrayAdapter<String> textAdapter;
+    Tree sampleDataStore;
+    List<String> projectNames;
+
     public ProjectListActivityFragment() {
+        sampleDataStore = new Tree();
+        projectNames = sampleDataStore.getProjectNames();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_project_list, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_project_list, container, false);
+
+        textAdapter = new ArrayAdapter<String>(getActivity(), R.layout.instruction_list_row, R.id.list_item_user_input_textview, projectNames);
+
+        ListView projectList = (ListView)rootView.findViewById(R.id.projectList);
+        projectList.setAdapter(textAdapter);
+        projectList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getActivity(), InstructionActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        return rootView;
     }
 }
