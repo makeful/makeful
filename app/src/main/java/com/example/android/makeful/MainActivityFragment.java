@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import com.example.android.makeful.tree.Tree;
+
 import java.util.ArrayList;
 
 
@@ -23,6 +25,7 @@ public class MainActivityFragment extends Fragment {
     private ArrayAdapter<String> userInputAdapter;
     private Button buttonAdd;
     private Button listProjects;
+    private Button newProject;
 
     private EditText et;
     private ListView lv;
@@ -41,6 +44,21 @@ public class MainActivityFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ProjectListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        newProject = (Button)rootView.findViewById(R.id.newProject);
+        newProject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String projectName = "My cool project";
+                Tree.getInstance().newProject(projectName);
+
+                Intent intent = new Intent(getActivity(), InstructionActivity.class);
+                Bundle b = new Bundle();
+                b.putString("projectName", projectName);
+                intent.putExtras(b);
                 startActivity(intent);
             }
         });
