@@ -25,7 +25,7 @@ public class ProjectListActivityFragment extends Fragment {
     List<String> projectNames;
 
     public ProjectListActivityFragment() {
-        sampleDataStore = new Tree();
+        sampleDataStore = Tree.getInstance();
         projectNames = sampleDataStore.getProjectNames();
     }
 

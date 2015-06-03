@@ -12,12 +12,21 @@ public class Tree {
     private List<String> projectNames;
     private Map<String, Node> projectTrees;
 
-    public Tree() {
+    protected Tree() {
         projectNames = new LinkedList<String>();
         projectTrees = new HashMap<String, Node>();
 
         projectNames.add("Cupcakes");
         projectTrees.put("Cupcakes", ex1());
+    }
+
+    private static Tree instance = null;
+
+    public static Tree getInstance() {
+        if(instance == null) {
+            instance = new Tree();
+        }
+        return instance;
     }
 
     public List<String> getProjectNames() {

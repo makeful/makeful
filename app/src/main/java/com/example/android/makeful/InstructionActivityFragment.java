@@ -28,7 +28,7 @@ public class InstructionActivityFragment extends Fragment {
     List<String> instructionText;
 
     public InstructionActivityFragment() {
-        sampleDataStore = new Tree();
+        sampleDataStore = Tree.getInstance();
         instructionTree = sampleDataStore.getProject("Cupcakes");
         List<Instruction> instructions = TreeHelpers.flattenTree(instructionTree);
         instructionText = new ArrayList<String>();
