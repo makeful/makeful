@@ -39,7 +39,7 @@
             android:text="Ok, Add this project to my list."
             android:onClick="buttonOnClick"
             android:layout_weight="1"
-            android:id="@+id/button4"
+            android:id="@+id/newProject"
 
             android:layout_alignTop="@+id/button2"
             android:layout_alignParentRight="true"

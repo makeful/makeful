@@ -1,7 +1,8 @@
 package com.example.android.makeful;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -11,7 +12,20 @@ public class InstructionActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // During initial setup, plug in the details fragment.
         setContentView(R.layout.activity_instruction);
+
+        if (savedInstanceState == null) {
+            Fragment frag = new InstructionActivityFragment();
+
+            frag.setArguments(getIntent().getExtras());
+
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .add(R.id.fragment_container, frag)
+                    .commit();
+        }
     }
 
 
