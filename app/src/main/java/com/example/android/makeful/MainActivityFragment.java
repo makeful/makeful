@@ -22,7 +22,7 @@ public class MainActivityFragment extends Fragment {
     private ArrayList<String> projects;
     private ArrayAdapter<String> userInputAdapter;
     private Button buttonAdd;
-    private Button makeCupcakes;
+    private Button listProjects;
 
     private EditText et;
     private ListView lv;
@@ -36,11 +36,11 @@ public class MainActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
-        makeCupcakes = (Button)rootView.findViewById(R.id.makeCupcakes);
-        makeCupcakes.setOnClickListener(new View.OnClickListener() {
+        listProjects = (Button)rootView.findViewById(R.id.listProjects);
+        listProjects.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), InstructionActivity.class);
+                Intent intent = new Intent(getActivity(), ProjectListActivity.class);
                 startActivity(intent);
             }
         });

@@ -29,7 +29,7 @@
             android:drawableLeft="@drawable/browse_img"
             android:text="Make cupcakes"
             android:onClick="buttonOnClick"
-            android:id="@+id/makeCupcakes"
+            android:id="@+id/listProjects"
             />
 
         <Button
