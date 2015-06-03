@@ -41,7 +41,12 @@ public class ProjectListActivityFragment extends Fragment {
         projectList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String projectName = projectNames.get(position);
+
                 Intent intent = new Intent(getActivity(), InstructionActivity.class);
+                Bundle b = new Bundle();
+                b.putString("projectName", projectName);
+                intent.putExtras(b);
                 startActivity(intent);
             }
         });
