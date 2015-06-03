@@ -1,11 +1,41 @@
 package com.example.android.makeful;
 
-import org.w3c.dom.Node;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by ashley on 5/30/15.
  */
 public class Tree {
+    private List<String> projectNames;
+    private Map<String, Node> projectTrees;
+
+    public Tree() {
+        projectNames = new LinkedList<String>();
+        projectTrees = new HashMap<String, Node>();
+
+        projectNames.add("Cupcakes");
+        projectTrees.put("Cupcakes", ex1());
+    }
+
+    public List<String> projects() {
+        return projectNames;
+    }
+
+    public Node newProject(String name) {
+        Instruction tree = new Instruction();
+        tree.text = "Enter instructions here";
+        projectNames.add(name);
+        projectTrees.put(name, tree);
+        return tree;
+    }
+
+    public Node getProject(String projectName) {
+        return projectTrees.get(projectName);
+    }
+
     public Node ex1(){
 
         Instruction instr1 = new Instruction(1800);

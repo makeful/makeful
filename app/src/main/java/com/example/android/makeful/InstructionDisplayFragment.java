@@ -1,9 +1,7 @@
 package com.example.android.makeful;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -13,19 +11,13 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 
 /**
  * Created by ashley on 6/2/15.
  */
 public class InstructionDisplayFragment extends Fragment{
-        private ArrayAdapter<String> forecast_adapter;
+        private ArrayAdapter<String> instruction_adapter;
 
         public InstructionDisplayFragment() {
         }
@@ -39,7 +31,7 @@ public class InstructionDisplayFragment extends Fragment{
 
         @Override
         public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-            inflater.inflate(R.menu.forecastfragment, menu);
+            inflater.inflate(R.menu.menu_main, menu);
         }
         @Override
         public boolean onOptionsItemSelected(MenuItem item){
@@ -70,18 +62,18 @@ public class InstructionDisplayFragment extends Fragment{
             weatherData.add("Saturday - Sunny - 88 / 63");
             weatherData.add("Sunday - Sunny - 88 / 63");
 
-            forecast_adapter = new ArrayAdapter<String>(
+            instruction_adapter = new ArrayAdapter<String>(
                     //The current context (fragment's parent activity)
                     getActivity(),
                     //ID of the list item layout
-                    R.layout.list_item_forecast,
+                    R.layout.list_item_instructions,
                     //links to the specific textView
-                    R.id.list_item_forecast_textview,
+                    R.id.list_item_instruction_textview,
                     //reference to our forecast data
                     weatherData);
 
-            ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
-            listView.setAdapter(forecast_adapter);
+            ListView listView = (ListView) rootView.findViewById(R.id.list_item_instruction_textview);
+            listView.setAdapter(instruction_adapter);
 
             return rootView;
         }
