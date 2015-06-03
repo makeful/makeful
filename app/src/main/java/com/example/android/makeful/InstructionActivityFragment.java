@@ -29,17 +29,22 @@ public class InstructionActivityFragment extends Fragment {
 
     public InstructionActivityFragment() {
         sampleDataStore = Tree.getInstance();
-        instructionTree = sampleDataStore.getProject("Cupcakes");
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        System.out.println("HERE");
+        System.out.println(getArguments());
+        String projectName = getArguments().getString("projectName");
+
+        instructionTree = sampleDataStore.getProject(projectName);
+
         List<Instruction> instructions = TreeHelpers.flattenTree(instructionTree);
         instructionText = new ArrayList<String>();
         for(Instruction instr : instructions) {
             instructionText.add(instr.text);
         }
-    }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_instruction, container, false);
 
         textAdapter = new ArrayAdapter<String>(getActivity(), R.layout.instruction_list_row, R.id.list_item_user_input_textview, instructionText);
