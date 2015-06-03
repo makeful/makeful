@@ -42,8 +42,7 @@ public class InstructionActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_instruction, container, false);
 
-        textAdapter = new ArrayAdapter<String>(getActivity(), R.layout.listitem_user_input, R.id.list_item_user_input_textview, instructionText);
-
+        textAdapter = new ArrayAdapter<String>(getActivity(), R.layout.instruction_list_row, R.id.list_item_user_input_textview, instructionText);
 
         ListView instructionList = (ListView)rootView.findViewById(R.id.instructionList);
         instructionList.setAdapter(textAdapter);
