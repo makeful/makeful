@@ -16,9 +16,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <uses-permission android:name="android.permission.INTERNET"/>
-        <application android:icon="@drawable/mf_icon_final"
-                     android:label="@string/makeful" />
+
+        <uses-permission android:name="android.permission.INTERNET" />
+
+        <application
+            android:icon="@drawable/mf_icon_final"
+            android:label="@string/makeful" />
+
+        <activity
+            android:name=".InstructionActivity"
+            android:label="@string/title_activity_instruction"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.makeful.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
