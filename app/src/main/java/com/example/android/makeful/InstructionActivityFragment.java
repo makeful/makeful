@@ -8,6 +8,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.android.makeful.tree.Instruction;
+import com.example.android.makeful.tree.Node;
+import com.example.android.makeful.tree.Tree;
+import com.example.android.makeful.tree.TreeHelpers;
+
 import java.util.ArrayList;
 import java.util.List;
 

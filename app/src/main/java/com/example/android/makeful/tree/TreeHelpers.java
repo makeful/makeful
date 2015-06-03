@@ -1,4 +1,4 @@
-package com.example.android.makeful;
+package com.example.android.makeful.tree;
 
 import java.util.HashSet;
 import java.util.LinkedList;
