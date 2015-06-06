@@ -33,7 +33,6 @@ public class InstructionActivityFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        System.out.println("HERE");
         System.out.println(getArguments());
         String projectName = getArguments().getString("projectName");
 

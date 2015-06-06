@@ -49,12 +49,12 @@
             android:layout_alignParentEnd="true"
             style="@style/WelcomeFont"
             />
-<!--
-        <Button
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/circuitart_sm"
-            android:text="Add a Project"
+            android:text="This application is currently in alpha but is being actively developed!"
             android:onClick="buttonOnClick"
             android:id="@+id/addNewProject"
             android:scaleType="fitXY"
@@ -63,6 +63,6 @@
             android:layout_alignParentEnd="true"
             style="@style/WelcomeFont"
             />
--->
+
     </LinearLayout>
  </ScrollView>
