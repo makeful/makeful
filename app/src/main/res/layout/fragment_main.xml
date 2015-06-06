@@ -16,34 +16,53 @@
         android:orientation="vertical">
 
         <TextView
-            android:text="Welcome to Makeful!"
+            android:text="Welcome!"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/welcome_message"
+            style="@style/WelcomeFont"
+            android:layout_weight="0.08" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:drawableLeft="@drawable/browse_img_sm"
+            android:text="Browse Projects"
+            android:onClick="buttonOnClick"
+            android:id="@+id/listProjects"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
             style="@style/WelcomeFont"
             />
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="298dp"
-            android:drawableLeft="@drawable/browse_img"
-            android:text="Make cupcakes"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/begin_project_img_sm"
+            android:text="Make a Project"
             android:onClick="buttonOnClick"
-            android:id="@+id/listProjects"
-            />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:drawableLeft="@drawable/begin_project_img"
-            android:text="Ok, Add this project to my list."
-            android:onClick="buttonOnClick"
-            android:layout_weight="1"
             android:id="@+id/newProject"
-
+            android:scaleType="fitXY"
             android:layout_alignTop="@+id/button2"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
+            android:layout_alignParentEnd="true"
+            style="@style/WelcomeFont"
+            />
+<!--
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/circuitart_sm"
+            android:text="Add a Project"
+            android:onClick="buttonOnClick"
+            android:id="@+id/addNewProject"
+            android:scaleType="fitXY"
+            android:layout_alignTop="@+id/button2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            style="@style/WelcomeFont"
+            />
+-->
     </LinearLayout>
  </ScrollView>
