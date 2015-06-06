@@ -1,5 +1,8 @@
 # Welcome to Makeful!
 
+Please visit our new landing page at:
+makeful.us
+
  Makeful allows you to:
  * Search for a maker project
  * Complete your maker project with efficiency (read: minimized downtime) in mind
