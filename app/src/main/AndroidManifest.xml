@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.makeful" >
+    package="com.makefulapp.android.makeful" >
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -9,7 +10,7 @@
         android:theme="@style/AppTheme" >
 
         <activity
-            android:name="com.example.android.makeful.SplashScreen"
+            android:name="com.makefulapp.android.makeful.SplashScreen"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar" >
@@ -21,7 +22,7 @@
         </activity>
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.makefulapp.android.makeful.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,27 +31,21 @@
             </intent-filter>
         </activity>
 
-        <uses-permission android:name="android.permission.INTERNET" />
-
-        <application
-            android:icon="@drawable/mf_icon_final"
-            android:label="@string/makeful" />
-
         <activity
-            android:name=".InstructionActivity"
+            android:name="com.makefulapp.android.makeful.InstructionActivity"
             android:label="@string/title_activity_instruction"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName="com.makefulapp.android.makeful.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.makeful.MainActivity" />
+                android:value="com.makefulapp.android.makeful.MainActivity" />
         </activity>
         <activity
-            android:name=".ProjectListActivity"
+            android:name="com.makefulapp.android.makeful.ProjectListActivity"
             android:label="@string/title_activity_project_list"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName="com.makefulapp.android.makeful.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.makeful.MainActivity" />
+                android:value="com.makefulapp.android.makeful.MainActivity" />
         </activity>
     </application>
 

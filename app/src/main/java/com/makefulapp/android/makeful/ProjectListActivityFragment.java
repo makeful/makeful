@@ -1,4 +1,4 @@
-package com.example.android.makeful;
+package com.makefulapp.android.makeful;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.android.makeful.tree.Tree;
+import com.makefulapp.android.makeful.tree.Tree;
 
 import java.util.List;
 

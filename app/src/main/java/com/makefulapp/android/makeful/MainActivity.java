@@ -1,38 +1,23 @@
-package com.example.android.makeful;
+package com.makefulapp.android.makeful;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class InstructionActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // During initial setup, plug in the details fragment.
-        setContentView(R.layout.activity_instruction);
-
-        if (savedInstanceState == null) {
-            Fragment frag = new InstructionActivityFragment();
-
-            frag.setArguments(getIntent().getExtras());
-
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .add(R.id.fragment_container, frag)
-                    .commit();
-        }
+        setContentView(R.layout.activity_main);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_instruction, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
