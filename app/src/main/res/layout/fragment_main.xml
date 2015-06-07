@@ -55,7 +55,6 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/circuitart_sm"
             android:text="This application is currently in alpha and is being actively developed!"
-            android:onClick="buttonOnClick"
             android:id="@+id/addNewProject"
             android:scaleType="fitXY"
             android:layout_alignTop="@+id/button2"
